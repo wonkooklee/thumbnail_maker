@@ -16,7 +16,7 @@ a, a:active {
 body {
   position: relative;
   background-color: #d4d4d4;
-  /* height: 100vh; */
+  height: 100vh;
   min-height: 1220px;
   font-family: 'Noto Sans KR', sans-serif;
 }
@@ -34,7 +34,6 @@ section.wrapper {
 article.contents {
   position: relative;
   margin: 0 auto;
-  /* height: 100%; */
   width: 768px;
 }
 
@@ -44,8 +43,7 @@ header {
   padding-top: 64px;
   margin-bottom: 35px;
   width: 100%;
-  /* height: 212px; */
-  /* background-color: #f4f4f4; */
+  font-family: 'Roboto', sans-serif;
   position: relative;
 }
 
@@ -63,7 +61,6 @@ header .author {
   position: relative;
   margin-top: 58px;
   height: 48px;
-  /* background-color: tomato; */
 }
 
 header .author img {
@@ -124,7 +121,7 @@ header .author .user {
 
 #comp__opt1 .subtitle {
   position: relative;
-  top: 165px;
+  top: 160px;
   font-size: 24px;
 }
 
@@ -158,7 +155,7 @@ header .author .user {
 
 #comp__opt2 .category {
   position: relative;
-  top: 250px;
+  top: 230px;
   font-size: 25px;
 }
 
@@ -278,7 +275,6 @@ input.input__field::placeholder {
   height: 70px;
   line-height: 68px;
   border-bottom: 1px solid #cacaca;
-  /* background-color: tomato; */
 }
 
 
