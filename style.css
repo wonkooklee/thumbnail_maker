@@ -16,7 +16,8 @@ a, a:active {
 body {
   position: relative;
   background-color: #d4d4d4;
-  height: 100vh;
+  /* height: 100vh; */
+  min-height: 1220px;
 }
 
 /* WRAPPER */
