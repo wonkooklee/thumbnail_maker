@@ -1,5 +1,5 @@
 /***********************************************************
-Thumbnail Maker v 1.1.0
+Thumbnail Maker v 1.1.1
 Made by Wonkook Lee (oneook)
 © All Rights Reserved
 ************************************************************/
@@ -166,7 +166,7 @@ const initBtn = document.querySelector('#initialize');
 
 const init = function() {
   domBody.style.background = preview.style.background = '';
-  domBody.style.backgroundColor = preview.style.backgroundColor = '#d4d4d4';
+  domBody.style.backgroundColor = preview.style.backgroundColor = '#78aaf9';
   prevTitle.textContent = '제목을 입력하세요';
   prevSubtitle.textContent = '부제목을 입력하세요';
   prevCategory.textContent = '분류를 입력하세요';
@@ -185,7 +185,14 @@ const init = function() {
 
   componentsBtns[0].classList.add('selected');
 
+  inputFields[0].focus();
+
   document.querySelector('.components').id = 'comp__opt1';
 }
 
 initBtn.addEventListener('click', init);
+
+
+// INIT (AFTER LOAD)
+
+init();

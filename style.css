@@ -15,7 +15,7 @@ a, a:active {
 
 body {
   position: relative;
-  background-color: #d4d4d4;
+  background: #f4f4f4;
   height: 100vh;
   min-height: 1220px;
   font-family: 'Noto Sans KR', sans-serif;
@@ -104,7 +104,7 @@ header .author .user {
 #comp__opt1 .title {
   position: relative;
   display: inline-block;
-  top: 145px;
+  top: 135px;
   font-size: 54px;
   font-weight: 500;
 }
@@ -121,7 +121,7 @@ header .author .user {
 
 #comp__opt1 .subtitle {
   position: relative;
-  top: 160px;
+  top: 150px;
   font-size: 24px;
 }
 
@@ -144,7 +144,7 @@ header .author .user {
 #comp__opt2 .title {
   position: relative;
   display: inline-block;
-  top: 170px;
+  top: 150px;
   font-size: 54px;
   font-weight: 500;
 }
@@ -213,10 +213,20 @@ input.input__field {
   margin-right: 12px;
   border: 1px solid #cacaca;
   border-radius: 14px;
-  color: #a7a7a7;
+  color: #555;
   font-size: 16px;
   font-weight: 400;
   padding-left: 14px;
+}
+
+.input__field:focus {
+  background-color: #3b45ff;
+  color: #fff;
+  outline: none;
+}
+
+.input__field:focus::placeholder {
+  color: #fff;
 }
 
 input.input__field::placeholder {
@@ -245,6 +255,10 @@ input.input__field::placeholder {
   font-weight: 400;
   cursor: pointer;
   transition: background-color 0.2s ease, color 0.2s ease, opacity 0.4s ease, transform 0.4s ease;
+}
+
+.btn:focus {
+  outline: none;
 }
 
 .btn:active {
@@ -316,16 +330,47 @@ input.input__field::placeholder {
   z-index: 100;
 }
 
+.capture_modal::after {
+  position: absolute;
+  text-align: center;
+  content: '🎉 완성되었습니다 🎉';
+  width: 600px;
+  display: inline-block;
+  top: -80px;
+  color: #fff;
+  font-size: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .overlay {
   position: fixed;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(3px);
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
 }
 
 .hidden {
   visibility: hidden;
   opacity: 0;
+}
+
+.canvas {
+  position: relative;
+  /* box-shadow: 0 0 100px #fff; */
+}
+
+
+/* COPYRIGHT */
+
+.copyright {
+  position: relative;
+  top: 50px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #fff;
+  text-align: center;
 }
