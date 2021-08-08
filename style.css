@@ -359,6 +359,7 @@ input.input__field::placeholder {
 
 .canvas {
   position: relative;
+  border: 1px solid #fff;
   /* box-shadow: 0 0 100px #fff; */
 }
 
