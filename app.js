@@ -29,7 +29,7 @@ const removeCapture = function() {
 produceImageBtn.addEventListener('click', captureExport);
 overlay.addEventListener('click', removeCapture);
 window.addEventListener('keydown', e => {
-  if (e.key = "Escape") {
+  if (e.key === "Escape") {
     removeCapture();
   }
 });
