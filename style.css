@@ -146,6 +146,7 @@ header .author .user {
   display: inline-block;
   top: 170px;
   font-size: 54px;
+  font-weight: 500;
 }
 
 #comp__opt2 .subtitle {
@@ -174,6 +175,7 @@ header .author .user {
   display: inline-block;
   top: 175px;
   font-size: 54px;
+  font-weight: 500;
 }
 
 #comp__opt3 .subtitle,
