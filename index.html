@@ -12,7 +12,10 @@
   <link rel="stylesheet" href="style.css">
   <script defer src="./resource/html2canvas.js"></script>
   <script defer src="app.js"></script>
-  <title>Thumbnail Maker by oneook</title>
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <title>Thumbnail-Maker by oneook</title>
 </head>
 <body>
   
@@ -20,7 +23,7 @@
     <article class="contents">
       <header>
         <h1># Thumbnail Maker</h1>
-        <p>썸네일 메이커 v 1.1.1 - velog format</p>
+        <p>썸네일 메이커 v 1.2.0 - velog format</p>
         <div class="author">
           <a class="logo" href="https://velog.io/@oneook" target="_blank">
             <img src="img/logo_thumbnail.jpg" alt="">
@@ -30,16 +33,16 @@
       </header>
       <div id="capture" class="preview">
         <ul class="components" id="comp__opt1">
-          <li class="title">제목을 입력하세요</li>
-          <li class="subtitle">부제목을 입력하세요</li>
-          <li class="category">분류를 입력하세요</li>
+          <li class="render title">제목을 입력하세요</li>
+          <li class="render subtitle">부제목을 입력하세요</li>
+          <li class="render category">분류를 입력하세요</li>
         </ul>
       </div>
       <div class="control__panel">
         <div class="inputFields">
-            <input class="input__field input__title" data-set="title" type="text" placeholder=">제목을 입력하세요">
-            <input class="input__field input__subtitle" data-set="subtitle" type="text" placeholder=">부제목을 입력하세요">
-            <input class="input__field input__category" data-set="category" type="text" placeholder=">분류를 입력하세요">
+            <input class="input__field input__title" data-set="title" type="text" spellcheck="false" placeholder=">제목을 입력하세요">
+            <input class="input__field input__subtitle" data-set="subtitle" type="text" spellcheck="false" placeholder=">부제목을 입력하세요">
+            <input class="input__field input__category" data-set="category" type="text" spellcheck="false" placeholder=">분류를 입력하세요">
         </div>
 
         <div class="background__btns">
@@ -59,20 +62,28 @@
             <button data-set="comp__opt3" class="btn component__opt">제목만</button>
           </div>
         </div>
+        
+        <div class="text__style">
+          <span class="textstyle__txt">텍스트 스타일 변경</span>
+          <div id="textstyle__btn__container" class="btns">
+            <button class="btn text__btn text__shadow">텍스트 그림자</button>
+            <button class="btn text__btn text__invert">텍스트 색상 반전</button>
+            <button class="btn text__btn text__size">제목 크기 작게</button>
+          </div>
+        </div>
 
         <div class="master__panel">
           <button class="btn" id="initialize">초기화</button>
           <button class="btn" id="export">완료 및 이미지화</button>
         </div>
-        <div class="copyright">
-          <a href="https://velog.io/@oneook" target="_blank">
-            <p class="me">ⓒ Wonkook Lee</p>
-          </a>
-        </div>
+
       </div>
-
-
     </article>
+    <div class="copyright">
+      <a href="https://velog.io/@oneook" target="_blank">
+        <p class="me">ⓒ Wonkook Lee</p>
+      </a>
+    </div>
   </section>
   <section class="mod capture_modal hidden"></section>
   <div class="mod overlay hidden"></div>

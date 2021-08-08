@@ -26,7 +26,7 @@ body {
 section.wrapper {
   margin: 0 auto;
   width: 1024px;
-  height: 1100px;
+  height: 1150px;
   background-color: #fff;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
@@ -103,13 +103,13 @@ header .author .user {
 
 #comp__opt1 .title {
   position: relative;
-  display: inline-block;
-  top: 135px;
+  display: block;
+  top: 140px;
   font-size: 54px;
   font-weight: 500;
 }
 
-#comp__opt1 .title::after {
+/* #comp__opt1 .title::after {
   content: '';
   display: inline-block;
   position: absolute;
@@ -117,17 +117,20 @@ header .author .user {
   width: 100%;
   left: 0;
   bottom: -5px;
-}
+} */
 
 #comp__opt1 .subtitle {
   position: relative;
+  display: inline-block;
   top: 150px;
   font-size: 24px;
+  border-top: 1px solid #ffffff;
+  padding-top: 5px;
 }
 
 #comp__opt1 .category {
   position: relative;
-  top: 230px;
+  top: 220px;
   font-size: 24px;
 }
 
@@ -192,9 +195,11 @@ header .author .user {
   padding-bottom: 50px;
 }
 
-.background__txt, .components__txt {
+.background__txt,
+.components__txt,
+.textstyle__txt {
   color: #666666;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 
@@ -226,7 +231,7 @@ input.input__field {
 }
 
 .input__field:focus::placeholder {
-  color: #fff;
+  color: #a9adfdc0;
 }
 
 input.input__field::placeholder {
@@ -287,18 +292,25 @@ input.input__field::placeholder {
   border-top: 1px solid #cacaca;
 }
 
-.background__btns, .components__btns {
+.background__btns,
+.components__btns,
+.text__style {
   height: 70px;
   line-height: 68px;
   border-bottom: 1px solid #cacaca;
 }
 
 
+/* TEXT STYLE */
+
+
+
+
 
 /* MASTER PANEL */
 
 .master__panel {
-  padding: 50px 0;
+  margin-top: 50px;
   text-align: center;
 }
 
@@ -368,13 +380,14 @@ input.input__field::placeholder {
 
 .copyright {
   position: relative;
-  top: 50px;
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 1px;
-  text-align: center;
+  text-align: right;
+  top: -77px;
 }
 
 .me {
   color: #fff;
+  display: inline-block;
 }

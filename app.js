@@ -1,5 +1,5 @@
 /***********************************************************
-Thumbnail Maker v 1.1.1
+Thumbnail Maker v 1.2.0
 Made by Wonkook Lee (oneook)
 © All Rights Reserved
 ************************************************************/
@@ -155,13 +155,75 @@ imgBtn.addEventListener('click', imageBackground);
 
 
 
-// INIT
+// TEXT STYLE FUNCTIONS
 
 const prevTitle = document.querySelector('.title');
 const prevSubtitle = document.querySelector('.subtitle');
 const prevCategory = document.querySelector('.category');
-
+const allBtns = document.querySelectorAll('.btn');
 const initBtn = document.querySelector('#initialize');
+
+const textstyleContainer = document.querySelector('.text__style');
+const textShadowBtn = document.querySelector('.text__shadow');
+const textInvertBtn = document.querySelector('.text__invert');
+const textSizeBtn = document.querySelector('.text__size');
+const textstyleBtns = document.querySelectorAll('.text__btn');
+const renderTxt = document.querySelectorAll('.render');
+
+textstyleBtns.forEach(e => {
+  e.addEventListener('click', e => {
+    const target = e.target;
+    target.classList.toggle('selected')
+  });
+})
+
+const textInvertFn = function(event) {
+  renderTxt.forEach(e => {
+    if (event.target.classList.contains('selected')) {
+      e.style.color = 'black';
+      prevSubtitle.style.borderTop = '1px solid #000000';
+    } else {
+      e.style.color = '#ffffff';
+      prevSubtitle.style.borderTop = '1px solid #ffffff';
+    }
+  });
+}
+
+const textShadowFn = function(event) {
+  renderTxt.forEach(e => {
+    if (event.target.classList.contains('selected')) {
+      e.style.textShadow = '2px 2px 4px rgba(0,0,0,0.4)'
+    } else {
+      e.style.textShadow = '';
+    }
+  })
+}
+
+const textSizeFn = function(event) {
+  renderTxt.forEach(e => {
+    if (event.target.classList.contains('selected')) {
+      prevTitle.style.fontSize = '46px';
+      prevSubtitle.style.fontSize = '22px';
+      prevCategory.style.fontSize = '22px';
+    } else {
+      prevTitle.style.fontSize = '54px';
+      prevSubtitle.style.fontSize = '24px';
+      prevCategory.style.fontSize = '24px';
+    }
+  })
+}
+
+textInvertBtn.addEventListener('click', textInvertFn);
+textShadowBtn.addEventListener('click', textShadowFn);
+textSizeBtn.addEventListener('click', textSizeFn);
+
+// INIT
+
+// const prevTitle = document.querySelector('.title');
+// const prevSubtitle = document.querySelector('.subtitle');
+// const prevCategory = document.querySelector('.category');
+// const allBtns = document.querySelectorAll('.btn');
+// const initBtn = document.querySelector('#initialize');
 
 
 const init = function() {
@@ -171,7 +233,7 @@ const init = function() {
   prevSubtitle.textContent = '부제목을 입력하세요';
   prevCategory.textContent = '분류를 입력하세요';
 
-  [...backgroundBtns].forEach(e => {
+  allBtns.forEach(e => {
     e.classList.remove('selected');
   })
 
@@ -179,14 +241,20 @@ const init = function() {
     e.value = '';
   });
 
-  componentsBtns.forEach(e => {
-    e.classList.remove('selected');
-  });
+  renderTxt.forEach(e => {
+    e.style.textShadow = '';
+    e.style.color = '#ffffff';
+  })
+  
+
+  prevSubtitle.style.borderTop = '1px solid #ffffff';
+  prevTitle.style.fontSize = '54px';
+  prevSubtitle.style.fontSize = '24px';
+  prevCategory.style.fontSize = '24px';
+  
 
   componentsBtns[0].classList.add('selected');
-
   inputFields[0].focus();
-
   document.querySelector('.components').id = 'comp__opt1';
 }
 
