@@ -88,8 +88,8 @@ header .author .user {
   width: 768px;
   background-color: #d4d4d4;
   overflow: hidden;
-  background-size: cover;
-  background-repeat: no-repeat;
+  /* background-size: cover;
+  background-repeat: no-repeat; */
 }
 
 /* COMPONENT OPTION 1 */

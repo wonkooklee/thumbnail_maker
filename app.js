@@ -18,25 +18,25 @@ const captureExport = function() {
     letterRendering: 1,
     allowTaint: true,
     useCORS: true
-}).then(canvas => {
+  }).then(canvas => {
     captureModal.appendChild(canvas).classList.add('canvas');
   });
 
   mod.forEach(e => e.classList.remove('hidden'));
-}
+};
 
 const removeCapture = function() {
   captureModal.removeChild(captureModal.firstElementChild);
 
   mod.forEach(e => e.classList.add('hidden'));
-}
+};
 
 produceImageBtn.addEventListener('click', captureExport);
 overlay.addEventListener('click', removeCapture);
 window.addEventListener('keydown', e => {
   if (e.key === "Escape") {
     removeCapture();
-  }
+  };
 });
 
 
@@ -47,7 +47,7 @@ const inputFields = document.querySelectorAll('.input__field');
 const updateInputValue = function(e) {
   const target = e.target.dataset.set;
   document.querySelector(`.${target}`).textContent = e.target.value;
-}
+};
 
 inputFields.forEach(e => {
   e.addEventListener('input', updateInputValue);
@@ -135,11 +135,15 @@ const imgBtn = document.querySelector('.img__url');
 const imageBackground = function(e) {
 
   let imgUrl = prompt('이미지 주소를 입력하세요 😇');
-  if (!imgUrl) return;
+  if (!imgUrl) {
+    alert('올바르지 않은 URL입니다 😨');
+    return;
+  };
 
-  domBody.style.background = preview.style.backgroundImage = `url(${imgUrl})`;
-  domBody.style.backgroundSize = 'cover';
-  domBody.style.backgroundRepeat = 'no-repeat';
+  domBody.style.background = preview.style.background = `url('${imgUrl}')`;
+  domBody.style.backgroundSize = preview.style.backgroundSize = 'cover';
+  domBody.style.backgroundRepeat = preview.style.backgroundRepeat = 'no-repeat';
+  domBody.style.backgroundPosition = preview.style.backgroundPosition = 'center';
 
   [...backgroundBtns].forEach(e => {
     e.classList.remove('selected');
