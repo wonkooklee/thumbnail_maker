@@ -13,7 +13,12 @@ const mod = document.querySelectorAll('.mod');
 const overlay = document.querySelector('.overlay');
 
 const captureExport = function() {
-  html2canvas(document.querySelector("#capture")).then(canvas => {
+  html2canvas(document.querySelector("#capture"), {
+    logging: true,
+    letterRendering: 1,
+    allowTaint: true,
+    useCORS: true
+}).then(canvas => {
     captureModal.appendChild(canvas).classList.add('canvas');
   });
 
