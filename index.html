@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+  <script defer src="./resource/html2canvas.js"></script>
+  <script defer src="app.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  
+  <section class="wrapper">
+    <article class="contents">
+      <header>
+        <h1># Thumbnail Maker</h1>
+        <p>썸네일 메이커 v 1.1.0 - 벨로그 포맷</p>
+        <div class="author">
+          <a class="logo" href="#">
+            <img src="img/logo_thumbnail.jpg" alt="">
+            <span class="user">oneook</span>
+          </a>
+        </div>
+      </header>
+      <div id="capture" class="preview">
+        <ul class="components" id="comp__opt1">
+          <li class="title">제목을 입력하세요</li>
+          <li class="subtitle">부제목을 입력하세요</li>
+          <li class="category">분류를 입력하세요</li>
+        </ul>
+      </div>
+      <div class="control__panel">
+        <div class="inputFields">
+            <input class="input__field input__title" data-set="title" type="text" placeholder=">제목을 입력하세요">
+            <input class="input__field input__subtitle" data-set="subtitle" type="text" placeholder=">부제목을 입력하세요">
+            <input class="input__field input__category" data-set="category" type="text" placeholder=">분류를 입력하세요">
+        </div>
+
+        <div class="background__btns">
+          <span class="background__txt">배경을 정해주세요</span>
+          <div id="background__btn__container" class="btns">
+            <button class="btn random__gradient">랜덤 그라디언트</button>
+            <button class="btn random__solid">랜덤 단색</button>
+            <button class="btn img__url">이미지 URL</button>
+          </div>
+        </div>
+
+        <div class="components__btns">
+          <span class="components__txt">썸네일 구성 요소</span>
+          <div id="component__btn__container" class="btns">
+            <button data-set="comp__opt1" class="btn component__opt selected">제목 / 부제목 / 분류</button>
+            <button data-set="comp__opt2" class="btn component__opt">제목 / 분류</button>
+            <button data-set="comp__opt3" class="btn component__opt">제목만</button>
+          </div>
+        </div>
+
+        <div class="master__panel">
+          <button class="btn" id="initialize">초기화</button>
+          <button class="btn" id="export">완료 및 이미지화</button>
+        </div>
+      </div>
+
+    </article>
+  </section>
+  <section class="mod capture_modal hidden"></section>
+  <div class="mod overlay hidden"></div>
+
+</body>
+</html>
