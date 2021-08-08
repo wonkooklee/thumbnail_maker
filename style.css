@@ -372,6 +372,9 @@ input.input__field::placeholder {
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 1px;
-  color: #fff;
   text-align: center;
+}
+
+.me {
+  color: #fff;
 }
