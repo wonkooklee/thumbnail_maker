@@ -227,8 +227,8 @@ textSizeBtn.addEventListener('click', textSizeFn);
 
 
 const init = function() {
-  domBody.style.background = 'url(https://images.unsplash.com/photo-1586521532926-7db207e5b019?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MnwwWXlKNlBMbVY3OHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60) center center / cover no-repeat';
-  preview.style.background = 'url(https://images.unsplash.com/photo-1586521532926-7db207e5b019?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MnwwWXlKNlBMbVY3OHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60) center center / cover no-repeat';
+  domBody.style.background = 'url(https://images.unsplash.com/photo-1620121478247-ec786b9be2fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1489&q=80) center center / cover no-repeat';
+  preview.style.background = 'url(https://images.unsplash.com/photo-1620121478247-ec786b9be2fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1489&q=80) center center / cover no-repeat';
   domBody.style.backgroundColor = preview.style.backgroundColor = '#78aaf9';
   prevTitle.textContent = '제목을 입력하세요';
   prevSubtitle.textContent = '부제목을 입력하세요';
