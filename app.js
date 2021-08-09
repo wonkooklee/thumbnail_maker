@@ -1,5 +1,5 @@
 /***********************************************************
-Thumbnail Maker v 1.2.0
+Thumbnail Maker v 1.2.1
 Made by Wonkook Lee (oneook)
 © All Rights Reserved
 ************************************************************/
@@ -227,8 +227,8 @@ textSizeBtn.addEventListener('click', textSizeFn);
 
 
 const init = function() {
-  domBody.style.background = 'url(https://images.unsplash.com/photo-1620030509984-faa945a53060?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MnwwWXlKNlBMbVY3OHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60) center center / cover no-repeat';
-  preview.style.background = 'url(https://images.unsplash.com/photo-1620030509984-faa945a53060?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MnwwWXlKNlBMbVY3OHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60) center center / cover no-repeat';
+  domBody.style.background = 'url(https://images.unsplash.com/photo-1586521532926-7db207e5b019?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MnwwWXlKNlBMbVY3OHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60) center center / cover no-repeat';
+  preview.style.background = 'url(https://images.unsplash.com/photo-1586521532926-7db207e5b019?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MnwwWXlKNlBMbVY3OHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60) center center / cover no-repeat';
   domBody.style.backgroundColor = preview.style.backgroundColor = '#78aaf9';
   prevTitle.textContent = '제목을 입력하세요';
   prevSubtitle.textContent = '부제목을 입력하세요';

@@ -21,6 +21,20 @@ body {
   font-family: 'Noto Sans KR', sans-serif;
 }
 
+body::after {
+  position: fixed;
+  content: '';
+  top: 0;
+  left: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+  z-index: -100;
+  backdrop-filter: blur(10px);  
+}
+
+
+
 /* WRAPPER */
 
 section.wrapper {
@@ -382,7 +396,6 @@ input.input__field::placeholder {
   position: relative;
   font-size: 14px;
   font-weight: 400;
-  letter-spacing: 1px;
   text-align: right;
   top: -77px;
 }
@@ -390,4 +403,10 @@ input.input__field::placeholder {
 .me {
   color: #fff;
   display: inline-block;
+}
+
+.unsplash {
+  color: #ffffff;
+  font-weight: 300;
+  font-size: 12px;
 }
