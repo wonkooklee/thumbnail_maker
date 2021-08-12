@@ -1,3 +1,5 @@
+![](https://media.vlpt.us/images/oneook/post/735203c3-e8a3-4f91-8f09-b5b28a18aef9/ezgif-7-1105d89ad507.gif)
+
 ---
 # 썸네일 메이커 만들기
 ---
