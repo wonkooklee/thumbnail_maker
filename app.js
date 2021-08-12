@@ -136,7 +136,7 @@ const imageBackground = function(e) {
 
   let imgUrl = prompt('이미지 주소를 입력하세요 😇');
   if (!imgUrl) {
-    alert('올바르지 않은 URL입니다 😨');
+    // alert('올바르지 않은 URL입니다 😨'); 사용자 개선 의견에 따라 주석 처리 08/12
     return;
   };
 
