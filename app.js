@@ -4,6 +4,8 @@ Made by Wonkook Lee (oneook)
 © All Rights Reserved
 ************************************************************/
 
+"use strict"
+
 // HTML2CANVAS API
 
 const produceImageBtn = document.querySelector('#export');
