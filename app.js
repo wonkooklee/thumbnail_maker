@@ -1,10 +1,45 @@
 /***********************************************************
 Thumbnail Maker v 1.2.1
 Made by Wonkook Lee (oneook)
+Edited by devcomfort (2021.11.22.)
 © All Rights Reserved
 ************************************************************/
 
+/** 
+ *  @TODO download_canvas 함수를 실제 페이지에 적용하기
+ */
+
 "use strict"
+
+/** UUID 생성 함수
+ *  @returns {UUID}
+ */
+function uuid() {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+    var r = Math.random() * 16 | 0,
+      v = c == 'x' ? r : (r & 0x3 | 0x8);
+    return v.toString(16);
+  });
+}
+
+
+/** DOWNLOAD API
+ *  @link http://danml.com/download.html
+ *  @param {Element} canvas 엘리먼트를 넣으면, 다운로드 됩니다.
+ *  @return {undefined}
+ */
+
+const download_canvas = (canvas_element) => {
+  const mime_type = "image/jpeg"
+
+  canvas_element.toBlob(
+    (blob) => {
+      download(blob, `${uuid()}.jpg`, mime_type)
+    },
+    mime_type,
+    0.95
+  );
+};
 
 // HTML2CANVAS API
 
