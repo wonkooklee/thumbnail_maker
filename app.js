@@ -12,8 +12,14 @@ const produceImageBtn = document.querySelector('#export');
 const captureModal = document.querySelector('.capture_modal');
 const mod = document.querySelectorAll('.mod');
 const overlay = document.querySelector('.overlay');
+const inputFields = document.querySelectorAll('.input__field');
 
 const captureExport = function () {
+  inputFields.forEach((e) => {
+    if(e.dataset['changed'] != true) {
+      document.querySelector(`.${e.dataset['set']}`).textContent = '';
+    }
+  })
   html2canvas(document.querySelector('#capture'), {
     logging: true,
     letterRendering: 1,
@@ -24,7 +30,7 @@ const captureExport = function () {
   });
 
   mod.forEach((e) => e.classList.remove('hidden'));
-};
+}; 
 
 const removeCapture = function () {
   captureModal.removeChild(captureModal.firstElementChild);
@@ -40,13 +46,10 @@ window.addEventListener('keydown', (e) => {
   }
 });
 
-// INPUT IMPLEMENTING
-
-const inputFields = document.querySelectorAll('.input__field');
-
 const updateInputValue = function (e) {
   const target = e.target.dataset.set;
   document.querySelector(`.${target}`).textContent = e.target.value;
+  e.dataset['changed'] = true;
 };
 
 inputFields.forEach((e) => {
