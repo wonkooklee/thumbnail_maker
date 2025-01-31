@@ -1,93 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="refresh"
+      content="0; url=https://blog.wonkooklee.com/playground/thumbnail-maker"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="./resource/html2canvas.min.js"></script>
+    <script defer src="app.js"></script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script defer src="./resource/html2canvas.min.js"></script>
-  <script defer src="app.js"></script>
-
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-<link rel="icon" href="img/favicon.ico" type="image/x-icon">
-  <title>Thumbnail-Maker by oneook</title>
-</head>
-<body>
-
-  <section class="wrapper">
-    <article class="contents">
-      <header>
-        <h1># Thumbnail Maker</h1>
-        <p>썸네일 메이커 v 1.2.1 - velog format</p>
-        <div class="author">
-          <a class="logo" href="https://velog.io/@oneook" target="_blank">
-            <img src="img/logo_thumbnail.jpg" alt="">
-            <span class="user">oneook</span>
-          </a>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <title>Thumbnail-Maker by oneook</title>
+  </head>
+  <body>
+    <section class="wrapper">
+      <article class="contents">
+        <header>
+          <h1># Thumbnail Maker</h1>
+          <p>썸네일 메이커 v 1.2.1 - velog format</p>
+          <div class="author">
+            <a class="logo" href="https://velog.io/@oneook" target="_blank">
+              <img src="img/logo_thumbnail.jpg" alt="" />
+              <span class="user">oneook</span>
+            </a>
+          </div>
+        </header>
+        <div id="capture" class="preview">
+          <ul class="components" id="comp__opt1">
+            <li class="render title">제목을 입력하세요</li>
+            <li class="render subtitle">부제목을 입력하세요</li>
+            <li class="render category">분류를 입력하세요</li>
+          </ul>
         </div>
-      </header>
-      <div id="capture" class="preview">
-        <ul class="components" id="comp__opt1">
-          <li class="render title">제목을 입력하세요</li>
-          <li class="render subtitle">부제목을 입력하세요</li>
-          <li class="render category">분류를 입력하세요</li>
-        </ul>
+        <div class="control__panel">
+          <div class="inputFields">
+            <input
+              class="input__field input__title"
+              data-set="title"
+              type="text"
+              spellcheck="false"
+              placeholder=">제목을 입력하세요"
+            />
+            <input
+              class="input__field input__subtitle"
+              data-set="subtitle"
+              type="text"
+              spellcheck="false"
+              placeholder=">부제목을 입력하세요"
+            />
+            <input
+              class="input__field input__category"
+              data-set="category"
+              type="text"
+              spellcheck="false"
+              placeholder=">분류를 입력하세요"
+            />
+          </div>
+
+          <div class="background__btns">
+            <span class="background__txt">배경을 정해주세요</span>
+            <div id="background__btn__container" class="btns">
+              <button class="btn random__gradient">랜덤 그라디언트</button>
+              <button class="btn random__solid">랜덤 단색</button>
+              <button class="btn img__url">이미지 URL</button>
+            </div>
+          </div>
+
+          <div class="components__btns">
+            <span class="components__txt">썸네일 구성 요소</span>
+            <div id="component__btn__container" class="btns">
+              <button data-set="comp__opt1" class="btn component__opt selected">
+                제목 / 부제목 / 분류
+              </button>
+              <button data-set="comp__opt2" class="btn component__opt">
+                제목 / 분류
+              </button>
+              <button data-set="comp__opt3" class="btn component__opt">
+                제목만
+              </button>
+            </div>
+          </div>
+
+          <div class="text__style">
+            <span class="textstyle__txt">텍스트 스타일 변경</span>
+            <div id="textstyle__btn__container" class="btns">
+              <button class="btn text__btn text__shadow">텍스트 그림자</button>
+              <button class="btn text__btn text__invert">
+                텍스트 색상 반전
+              </button>
+              <button class="btn text__btn text__size">제목 크기 작게</button>
+            </div>
+          </div>
+
+          <div class="master__panel">
+            <button class="btn" id="initialize">초기화</button>
+            <button class="btn" id="export">완료 및 이미지화</button>
+          </div>
+        </div>
+      </article>
+      <div class="copyright">
+        <a href="https://velog.io/@oneook" target="_blank">
+          <p class="me">ⓒ Wonkook Lee</p>
+          <p class="unsplash">Images from Unsplash</p>
+        </a>
       </div>
-      <div class="control__panel">
-        <div class="inputFields">
-            <input class="input__field input__title" data-set="title" type="text" spellcheck="false" placeholder=">제목을 입력하세요">
-            <input class="input__field input__subtitle" data-set="subtitle" type="text" spellcheck="false" placeholder=">부제목을 입력하세요">
-            <input class="input__field input__category" data-set="category" type="text" spellcheck="false" placeholder=">분류를 입력하세요">
-        </div>
-
-        <div class="background__btns">
-          <span class="background__txt">배경을 정해주세요</span>
-          <div id="background__btn__container" class="btns">
-            <button class="btn random__gradient">랜덤 그라디언트</button>
-            <button class="btn random__solid">랜덤 단색</button>
-            <button class="btn img__url">이미지 URL</button>
-          </div>
-        </div>
-
-        <div class="components__btns">
-          <span class="components__txt">썸네일 구성 요소</span>
-          <div id="component__btn__container" class="btns">
-            <button data-set="comp__opt1" class="btn component__opt selected">제목 / 부제목 / 분류</button>
-            <button data-set="comp__opt2" class="btn component__opt">제목 / 분류</button>
-            <button data-set="comp__opt3" class="btn component__opt">제목만</button>
-          </div>
-        </div>
-        
-        <div class="text__style">
-          <span class="textstyle__txt">텍스트 스타일 변경</span>
-          <div id="textstyle__btn__container" class="btns">
-            <button class="btn text__btn text__shadow">텍스트 그림자</button>
-            <button class="btn text__btn text__invert">텍스트 색상 반전</button>
-            <button class="btn text__btn text__size">제목 크기 작게</button>
-          </div>
-        </div>
-
-        <div class="master__panel">
-          <button class="btn" id="initialize">초기화</button>
-          <button class="btn" id="export">완료 및 이미지화</button>
-        </div>
-
-      </div>
-    </article>
-    <div class="copyright">
-      <a href="https://velog.io/@oneook" target="_blank">
-        <p class="me">ⓒ Wonkook Lee</p>
-        <p class="unsplash">Images from Unsplash</p>
-      </a>
-    </div>
-  </section>
-  <section class="mod capture_modal hidden"></section>
-  <div class="mod overlay hidden"></div>
-
-</body>
+    </section>
+    <section class="mod capture_modal hidden"></section>
+    <div class="mod overlay hidden"></div>
+    <noscript>
+      <meta
+        http-equiv="refresh"
+        content="0; url=https://blog.wonkooklee.com/playground/thumbnail-maker"
+      />
+    </noscript>
+  </body>
 </html>
